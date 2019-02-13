@@ -17,6 +17,7 @@ ul {
 li {
   float: left;
   border-right:1px solid #bbb;
+  border-left:1px solid #bbb;
 }
 li:first-child {
  border-right: none;
@@ -24,6 +25,7 @@ li:first-child {
 
 li:last-child {
   border-right: none;
+  border-left:1px solid green;
 }
 
 li a {
@@ -57,50 +59,78 @@ form
 {
 border: 3px solid white;
 }
-
-.regf
-{
-    margin:auto;
-     border: 3px solid black;
-    display: none;
-    position: center;
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 50%; 
-    height: 50%;
-    overflow: auto;
-    background-color: white;
-    opacity: 70%;
-    padding-top: 10px;
+.modallog {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-.logf
-{
-    margin:auto;
-     border: 3px solid black;
-    display: none;
-    position: center;
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%;
-    overflow: auto;
-    background-color: white;
-    opacity: 70%;
-    padding-top: 10px;
-}
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 30%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
+}
+.modalreg {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  }
+.modal-header {
+  padding: 2px 16px;
+  background-color: #333;
+  color: white;}
+  
+ .modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #333;
+  color: white;
+}
 .Regb {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #4CAF50;
+width: auto;
+display: block;
+color: white;
+text-align: center;
+text-decoration: none;
+border: 2px white;	
+padding: 10px 18px;
+background-color: #333;
+color:white;
+float:center;
 }
 .bbutton{
 display: block;
@@ -109,9 +139,21 @@ display: block;
   padding: 14px 16px;
   text-decoration: none;
   background-color: #333;
-  border: 2px solid green;
+  border: 2px  black;
 }
-h2
+.okbutton
+{
+width: auto;
+display: block;
+color: white;
+text-align: center;
+text-decoration: none;
+border: 2px white;
+padding: 10px 18px;
+background-color: #333;
+color:white;
+}
+.h2
 {
 display: block;
   color:  white;
@@ -126,12 +168,77 @@ display: block;
 <div class="header" id="myHeader">
 
   <ul>
-  <li><h2>Demo</h2></li>
+  <li><h2 class="h2">Demo</h2></li>
   <li><a href="#news">News</a></li>
   <li><a href="#contact">Contact</a></li>
-  <li style="float:right"><button class="bbutton"  onclick="document.getElementById('id02').style.display='block'">Login</button></li>
+  <li style="float:right"><button class="bbutton"  onclick="document.getElementById('myModallog').style.display='block'">Login</button></li>
 </ul>
-</div>
+<div id="myModallog" class="modallog">
 
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>LOGIN</h2>
+    </div>
+    <div class="modal-body">
+      <form method="post" action="login">
+Mail id:<input type="text" name="idl" placeholder="Student ID" required PATTERN="[0-9]{3,5}"><br> <br>
+Password :<input type="password" name="passl" placeholder="Min 8 chars" required pattern="[A-Za-z0-9]{8,}"><br> <br>
+<button type="submit" class="okbutton">Login</button>
+</form>
+    </div>
+    <div class="modal-footer">
+    <button type="button" onclick="regDis()" class="Regb">Register</button>
+    </div>
+  </div>
+
+</div>
+<div id="myModalreg" class="modalreg">
+
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>REGISTER</h2>
+    </div>
+    <div class="modal-body">
+      <form method="post" action="Register">
+Mail id:<input type="text" name="id" placeholder="Student ID" required PATTERN="[0-9]{3,5}"><br> <br>
+Name:<input type="text" name="name" placeholder="Name" required pattern="[A-Za-z]{2,20}"><br> <br>
+Age:<input type="text" name="age" placeholder="Age" required pattern="[0-9]{1,3}"><br> <br>
+Password :<input type="password" name="pass" placeholder="Password" required pattern="[A-Za-z0-9]{8,}" title="Min 8 characters"><br> <br>
+<button type="submit" class="okbutton">Register</button>
+</form>
+    </div>
+    <div class="modal-footer">
+    <h3></h3>
+    
+    </div>
+  </div>
+
+</div>
+</div>
+<script>
+var modallog = document.getElementById('myModallog');
+var modalreg = document.getElementById('myModalreg');
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  modallog.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modallog) {
+    modallog.style.display = "none";
+  }
+}
+window.onclick = function(event) {
+	  if (event.target == modalreg) {
+	    modalreg.style.display = "none";
+	  }
+	}
+function regDis()
+{
+modalreg.style.display="block";
+modallog.style.display="none";
+}
+</script>
 </body>
 </html>
