@@ -16,8 +16,8 @@ ul {
 
 li {
   float: left;
-  border-right:1px solid #bbb;
-  border-left:1px solid #bbb;
+  border-right:1px solid #666666;
+  border-left:1px solid #666666;
 }
 li:first-child {
  border-right: none;
@@ -60,17 +60,17 @@ form
 border: 3px solid white;
 }
 .modallog {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
 }
 .modal-content {
   position: relative;
@@ -83,17 +83,17 @@ border: 3px solid white;
 
 }
 .modalreg {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
 }
 
 .close {
