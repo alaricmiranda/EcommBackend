@@ -170,7 +170,7 @@ display: block;
   <ul>
   <li><h2 class="h2">Demo</h2></li>
   <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
+  <li><a href="contact.jsp">Contact</a></li>
   <li style="float:right"><button class="bbutton"  onclick="document.getElementById('myModallog').style.display='block'">Login</button></li>
 </ul>
 <div id="myModallog" class="modallog">
