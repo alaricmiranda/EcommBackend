@@ -19,12 +19,13 @@
   width: 33.33%;
   padding: 5px;
 }
-
-/* Clearfix (clear floats) */
 .row::after {
   content: "";
   clear: both;
   display: table;
+}
+.text{
+position:relative;
 }
 </style>
 </head>
@@ -33,13 +34,22 @@
 <img src="contact.jpg" alt="Cinque Terre" width="100%" height="300" class="contact">
 <div class="row">
   <div class="column">
-    <img src="img_snow.jpg" alt="Snow" style="width:100%">
+    <img src="contactphone.jpg" alt="Snow" style="width:50%">
+    <div class="text">
+    Phone number-1800 *** ****
+    </div>
   </div>
   <div class="column">
-    <img src="img_forest.jpg" alt="Forest" style="width:100%">
+    <img src="contactmail.jpg" alt="Forest" style="width:50%">
+    <div class="text">
+    Email us at-****@***.com
+    </div>
   </div>
   <div class="column">
-    <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
+    <img src="contactlocation.jpg" alt="Mountains" style="width:50%">
+    <div class="text">
+    Visit us at-*********
+    </div>
   </div>
 </div>
 </body>
