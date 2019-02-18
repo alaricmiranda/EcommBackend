@@ -169,11 +169,11 @@ display: block;
 
   <ul>
   <li><h2 class="h2">Demo</h2></li>
-  <li><a href="index.jsp">Home</a></li>
-  <li><a href="contact.jsp">Contact</a></li>
+  <li><a href="/EcommFrontend/">Home</a></li>
+  <li><a href="/EcommFrontend/contact">Contact</a></li>
   <li style="float:right"><button class="bbutton"  onclick="document.getElementById('myModallog').style.display='block'">Login</button></li>
-  <li style="float:right"><a href="cart.jsp">
-  <img src="cart.png" alt="HT" style="width:20px;height:20px;border:0;">
+  <li style="float:right"><a href="/EcommFrontend/cart">
+  <img src="resources/cart.png" alt="HT" style="width:20px;height:20px;border:0;">
 </a></li>
 </ul>
 <div id="myModallog" class="modallog">

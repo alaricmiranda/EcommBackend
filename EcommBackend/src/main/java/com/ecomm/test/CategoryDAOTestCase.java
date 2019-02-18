@@ -44,13 +44,13 @@ public class CategoryDAOTestCase
 	}
 	
 	
-	@Test
-	public void updateCategoryTest()
-	{	
-		Category category=categoryDAO.getCategory(1);
-		category.setCategoryDesc("water");	
-		assertTrue("Problem in Updating the Category",categoryDAO.update(category));
-	}
+//	@Test
+//	public void updateCategoryTest()
+//	{	
+//		Category category=categoryDAO.getCategory(1);
+//		category.setCategoryDesc("water");	
+//		assertTrue("Problem in Updating the Category",categoryDAO.update(category));
+//	}
 	
 //	@Test
 //	public void deleteCategoryTest()

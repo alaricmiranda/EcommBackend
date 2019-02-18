@@ -31,22 +31,22 @@ position:relative;
 </head>
 <body>
 <jsp:include page="header.jsp" />
-<img src="contact.jpg" alt="Cinque Terre" width="100%" height="300" class="contact">
+<img src="resources/contact.jpg" alt="Cinque Terre" width="100%" height="300" class="contact">
 <div class="row">
   <div class="column">
-    <img src="contactphone.jpg" alt="Snow" style="width:50%">
+    <img src="resources/contactphone.jpg" alt="Snow" style="width:50%">
     <div class="text">
     Phone number-1800 *** ****
     </div>
   </div>
   <div class="column">
-    <img src="contactmail.jpg" alt="Forest" style="width:50%">
+    <img src="resources/contactmail.jpg" alt="Forest" style="width:50%">
     <div class="text">
     Email us at-****@***.com
     </div>
   </div>
   <div class="column">
-    <img src="contactlocation.jpg" alt="Mountains" style="width:50%">
+    <img src="resources/contactlocation.jpg" alt="Mountains" style="width:50%">
     <div class="text">
     Visit us at-*********
     </div>

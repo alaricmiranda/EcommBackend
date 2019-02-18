@@ -38,7 +38,7 @@ display: block;
         </tr>
       <tr class="itemr">
         <td>
-          <img src="50x50.png"></td>
+          <img src="resources/50x50.png"></td>
         <td>
           <p class="bold">Item 1</p>
           <p> DEMO demo  demo demo</p></td>
@@ -48,7 +48,7 @@ display: block;
          </tr>
       <tr class="item-row ">
         <td>
-          <img src="50x50.png"></td>
+          <img src="resources/50x50.png"></td>
         <td>
           <p class="bold">  Item 2</p>
           <p>demo demo demo </p></td>

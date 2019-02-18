@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@taglib uri = "http://www.springframework.org/tags/form" prefix = "form"%>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <style>
@@ -84,17 +86,17 @@ display: block;
 </head>
 <body>
 <jsp:include page="header.jsp" />
-<div class="slideshow-container">
+<div class="slideshow-container">	
 
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
-  <img src="slide1.jpg" style="width:100%">
+  <img src="resources/slide1.jpg" style="width:100%">
   <div class="text"></div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 3</div>
-  <img src="slide2.jpg" style="width:100%">
+  <img src="resources/slide2.jpg" style="width:100%">
   <div class="text"></div>
 </div>
 </div>
