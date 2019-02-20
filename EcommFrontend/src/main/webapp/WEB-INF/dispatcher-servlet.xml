@@ -13,7 +13,7 @@
 
 	<context:component-scan base-package="com.ecomm.*" />
  <mvc:resources mapping="/resources/**" location="/resources/" />
-	<bean
+<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">
 			<value>/WEB-INF/views/</value>
@@ -21,6 +21,6 @@
 		<property name="suffix">
 			<value>.jsp</value>
 		</property>
-	</bean>
+</bean>
 
 </beans>
