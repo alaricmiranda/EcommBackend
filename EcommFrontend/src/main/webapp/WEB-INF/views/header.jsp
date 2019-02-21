@@ -6,7 +6,7 @@
 <meta charset="ISO-8859-1">
 <title></title>
 <style>
-ul {
+.lih {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -14,21 +14,21 @@ ul {
   background-color: #333;
 }
 
-li {
+.lih li {
   float: left;
   border-right:1px solid #666666;
   border-left:1px solid #666666;
 }
-li:first-child {
+.lih li:first-child {
  border-right: none;
 }
 
-li:last-child {
+.lih li:last-child {
   border-right: none;
    border-left:none;
 }
 
-li a {
+.lih li a {
   display: block;
   color: white;
   text-align: center;
@@ -36,7 +36,7 @@ li a {
   text-decoration: none;
 }
 
-li a:hover{
+.lih li a:hover{
   background-color: #111;
 }
 
@@ -167,7 +167,7 @@ display: block;
 <body>
 <div class="header" id="myHeader">
 
-  <ul>
+  <ul class="lih">
   <li><h2 class="h2">Demo</h2></li>
   <li><a href="/EcommFrontend/">Home</a></li>
   <li><a href="/EcommFrontend/contact">Contact</a></li>

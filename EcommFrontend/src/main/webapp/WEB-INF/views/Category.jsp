@@ -1,4 +1,5 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@include file="header.jsp" %>
 
 <h3 align="center">Category Page</h3>
 

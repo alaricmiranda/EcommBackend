@@ -16,6 +16,27 @@ img {vertical-align: middle;}
   margin: auto;
 }
 
+ .ul{
+  list-style-type: none;
+  margin: 3px;
+  padding: 70px;
+  text-align: center;
+  overflow: hidden;
+  float: left;
+ }
+ .ul li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.ul li img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
 
 .text {
   color: #f2f2f2;
@@ -108,42 +129,18 @@ display: block;
 </div>
 <h3>Products</h3>
 <div class="display">
-<form action="<c:url value="/addCategory"/>" method="post">
-
-<table align="center">
-	<tr>
-		<td>Category Name </td>
-		<td><input type="text" id="categoryName" name="categoryName"/></td>
-	</tr>
-	<tr>
-		<td>Category Desc </td>
-		<td><input type="text" id="categoryDesc" name="categoryDesc"/></td>
-	</tr>
-	<tr>
-		<td colspan="2"><input type="submit" value="Add Category"/></td>
-	</tr>
-</table>
-</form>
-
-<table align="center" border="1">
-	<tr>
-		<td>Category ID</td>
-		<td>Category Name</td>
-		<td>Category Desc</td>
-		<td>Operations</td>
-	</tr>
 	<c:forEach items="${listCategories}" var="category">
-	<tr>
-		<td>${category.categoryId}</td>
-		<td>${category.categoryName}</td>
-		<td>${category.categoryDesc}</td>
-		<td>
-			<a href="<c:url value="/editCategory/${category.categoryId}"/>">Edit</a>
-			<a href="<c:url value="/deleteCategory/${category.categoryId}"/>">Delete</a>
-		</td>
-	</tr>
+	<ul class="ul">
+		<li><img src="resources/50x50.png"></li>
+		<li>${category.categoryName}</li>
+		<li>${category.categoryDesc}</li>
+		<li>
+			<a href="<c:url value="/cart/${category.categoryId}"/>">Add To Cart</a>
+		</li>
+	</ul>
 	</c:forEach>
-</table>
+	
+
 </div>
 
 <script>
