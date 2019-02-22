@@ -20,7 +20,7 @@ public class UserController
 	UserDao userDAO;
 	
 	@RequestMapping(value="/user")
-	public String showCategory(Model m)
+	public String showUser(Model m)
 	{
 		List<User> listUsers=userDAO.listUsers();
 		//binding the listCategories and sending to jsp page
@@ -58,7 +58,7 @@ public class UserController
 	}
 	
 	@RequestMapping(value="/editUser/{userId}")
-	public String editCategory(@PathVariable("userId")int userId,Model m)
+	public String editUser(@PathVariable("userId")int userId,Model m)
 	{
 		User user=userDAO.getUser(userId);
 		m.addAttribute("user",user);
@@ -66,7 +66,7 @@ public class UserController
 	}
 	
 	@RequestMapping(value="/updateUser",method=RequestMethod.POST)
-	public String updateCategory(@RequestParam("userId")int userId,@RequestParam("userName")String userName,@RequestParam("userEmailId")String userEmailId,@RequestParam("userContact")String userContact,@RequestParam("userPassword")String userPassword,Model m)
+	public String updateUser(@RequestParam("userId")int userId,@RequestParam("userName")String userName,@RequestParam("userEmailId")String userEmailId,@RequestParam("userContact")String userContact,@RequestParam("userPassword")String userPassword,Model m)
 	{
 		User user=userDAO.getUser(userId);
 		
