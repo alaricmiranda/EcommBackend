@@ -79,6 +79,6 @@ public class UserController
 		List<User> listUsers=userDAO.listUsers();
 		//binding the listCategories and sending to jsp page
 		m.addAttribute("listUsers", listUsers); 
-		return "user";
+		return "User";
 	}
 }
