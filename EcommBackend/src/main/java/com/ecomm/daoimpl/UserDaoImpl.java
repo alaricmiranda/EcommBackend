@@ -95,6 +95,21 @@ public class UserDaoImpl implements UserDao {
 		}
 	}
 
+@Transactional
+public User getUserbyName(String userName) {
+	try {
+		//Session session = sessionFactory.openSession();
+		System.out.println("fetching user pointer");
+		User user = (User) sessionFactory.getCurrentSession().createQuery("from User where userName=:userName").setString("userName", userName).uniqueResult();
+		System.out.println("forwarding pointer");
+		return user;
+	} catch (HibernateException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+		return null;
+	}
+}
+
 		
 	
 	

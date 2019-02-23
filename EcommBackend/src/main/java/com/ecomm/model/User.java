@@ -1,5 +1,6 @@
 package com.ecomm.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -14,10 +15,21 @@ public class User {
 @GeneratedValue()
 private int userId;
 private String userEmailId;
+@Column(name = "userName", unique = true, 
+nullable = false, length = 45)
 private String userName;
 private String userContact;
 private String userAddress;
 private String userPassword;
+private String userRole="ROLE_USER";
+@Column(name="Enabled")
+boolean enabled =true;
+public String getUserRole() {
+	return userRole;
+}
+public void setUserRole(String userRole) {
+	this.userRole = userRole;
+}
 public int getUserId() {
 	return userId;
 }

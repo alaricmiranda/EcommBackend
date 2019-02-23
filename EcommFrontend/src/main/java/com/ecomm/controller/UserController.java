@@ -66,7 +66,7 @@ public class UserController
 	}
 	
 	@RequestMapping(value="/updateUser",method=RequestMethod.POST)
-	public String updateUser(@RequestParam("userId")int userId,@RequestParam("userName")String userName,@RequestParam("userEmailId")String userEmailId,@RequestParam("userContact")String userContact,@RequestParam("userPassword")String userPassword,Model m)
+	public String updateUser(@RequestParam("userId")int userId,@RequestParam("userName")String userName,@RequestParam("userEmailId")String userEmailId,@RequestParam("userContact")String userContact,@RequestParam("userPassword")String userPassword,@RequestParam("userRole")String userRole,Model m)
 	{
 		User user=userDAO.getUser(userId);
 		
@@ -74,6 +74,7 @@ public class UserController
 		user.setUserEmailId(userEmailId);
 		user.setUserContact(userContact);
 		user.setUserPassword(userPassword);
+		user.setUserRole(userRole);
 		userDAO.update(user);
 		
 		List<User> listUsers=userDAO.listUsers();

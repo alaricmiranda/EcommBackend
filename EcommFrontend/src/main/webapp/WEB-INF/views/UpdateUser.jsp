@@ -36,6 +36,10 @@
 		<td><input type="text" id="userPassword" name="userPassword" value="${user.userPassword}"/></td>
 	</tr>
 	<tr>
+		<td>User role </td>
+		<td><input type="text" id="userRole" name="userRole" value="${user.userRole}"/></td>
+	</tr>
+	<tr>
 		<center>
 		<td colspan="2"><input type="submit" value="Update User"/></td>
 		</center>

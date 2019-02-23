@@ -34,6 +34,7 @@
 		<td>User Name</td>
 		<td>User Email</td>
 		<td>User Contact</td>
+		<td>User ROle</td>
 		<td>Operations</td>
 	</tr>
 	<c:forEach items="${listUsers}" var="user">
@@ -42,6 +43,7 @@
 		<td>${user.userName}</td>
 		<td>${user.userEmailId}</td>
 		<td>${user.userContact}</td>
+		<td>${user.userRole}</td>
 		<td>
 			<a href="<c:url value="/editUser/${user.userId}"/>">Edit</a>
 			<a href="<c:url value="/deleteUser/${user.userId}"/>">Delete</a>
